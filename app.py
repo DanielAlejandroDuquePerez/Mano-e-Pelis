@@ -27,7 +27,7 @@ cols = st.columns(4)
 for i, movie in enumerate(movies[:12]):
     with cols[i % 4]:
         poster_url = get_image_url(movie.get("poster_path"))
-        st.image(poster_url, use_container_width=True)
+        st.image(poster_url)
         st.markdown(f"**{movie['title']}**")
         rating = movie.get("vote_average", 0)
         st.caption(f"⭐ {rating:.1f}/10")
